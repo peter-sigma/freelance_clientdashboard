@@ -1,0 +1,19 @@
+<!-- dashboard/update_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title">Add Update for Task</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary w-100">Submit Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
