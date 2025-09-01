@@ -97,6 +97,8 @@ To run the project locally, follow these steps:
 ### Dashboard
 ![Dashboard](client_dashboard/dashboard.PNG)
 *Interactive dashboard with pie charts, progress bars, and task modals.*
+### Dashboard tasks section
+![Dashboard](client_dashboard/tasks.PNG)
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
