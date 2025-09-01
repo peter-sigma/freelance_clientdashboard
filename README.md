@@ -87,7 +87,7 @@ To run the project locally, follow these steps:
 
 ## Screenshots
 ### Landing Page
-![Landing Page](screenshots/landing_page.png)
+![Landing Page](client_dashboard/home.png)
 *Modern, responsive landing page with Bootstrap 5 and CTA.*
 
 ### Login Page
