@@ -66,8 +66,7 @@
                                     <div class="modal-body">
                                         <p>{{ task.description }}</p>
                                         <p><strong>Status:</strong> {{ task.status|title }}</p>
-                                        <p><strong>Due Date:</strong> {{ task.due_date|date:"M d, Y"|default:"Not set"
-                                            }}</p>
+                                        <p><strong>Due Date:</strong> {{ task.due_date|date:"M d, Y"|default:"Not set" }}</p>
                                         <p><strong>Updates:</strong></p>
                                         <ul>
                                             {% for update in task.updates.all %}

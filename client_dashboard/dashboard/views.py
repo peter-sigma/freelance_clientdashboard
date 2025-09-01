@@ -1,10 +1,16 @@
-from django.shortcuts import redirect
+from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from django.views.generic import ListView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
 from .models import Project, Task, ProgressUpdate
 from .forms import ProgressUpdateForm
+
+
+
+def home(request):
+    return render(request, 'dashboard/index.html')
+
 
 class DashboardView(LoginRequiredMixin, ListView):
     model = Project

@@ -20,10 +20,12 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
 from dashboard.views import custom_logout
+from dashboard.views import home
 
 
 
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('dashboard/', include('dashboard.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
