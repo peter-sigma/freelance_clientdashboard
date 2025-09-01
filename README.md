@@ -87,15 +87,15 @@ To run the project locally, follow these steps:
 
 ## Screenshots
 ### Landing Page
-![Landing Page](client_dashboard/home.png)
+![Landing Page](client_dashboard/home.PNG)
 *Modern, responsive landing page with Bootstrap 5 and CTA.*
 
 ### Login Page
-![Login Page](screenshots/login_page.png)
+![Login Page](client_dashboard/login.PNG)
 *Secure, animated login interface with error handling.*
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](client_dashboard/dashboard.PNG)
 *Interactive dashboard with pie charts, progress bars, and task modals.*
 
 ## Contributing
