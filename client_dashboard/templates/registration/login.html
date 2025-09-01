@@ -1,18 +1,55 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Client Login - Sigma Freelancer{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-6 col-sm-12">
-        <div class="card mt-5 shadow-sm">
-            <div class="card-body">
-                <h3 class="card-title text-center">Client Login</h3>
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" class="btn btn-primary w-100">Login</button>
-                </form>
+<section class="vh-100 d-flex align-items-center bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-lg animate__animated animate__fadeIn">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-4">Client Login</h2>
+                        {% if form.errors %}
+                            <div class="alert alert-danger" role="alert">
+                                Invalid username or password. Please try again.
+                            </div>
+                        {% endif %}
+                        <form method="post" action="{% url 'login' %}">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="{{ form.username.id_for_label }}" class="form-label">
+                                    <i class="fas fa-user me-2"></i>Username
+                                </label>
+                                <input type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}"
+                                       class="form-control" placeholder="Enter username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="{{ form.password.id_for_label }}" class="form-label">
+                                    <i class="fas fa-lock me-2"></i>Password
+                                </label>
+                                <input type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}"
+                                       class="form-control" placeholder="Enter password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                        </form>
+                        <div class="text-center mt-3">
+                            <p>Don't have an account? <a href="#" class="text-primary">Contact us</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+<style>
+    .animate__fadeIn {
+        animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
 {% endblock %}
